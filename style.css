@@ -1,0 +1,88 @@
+body {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #57233A;
+    
+}
+
+nav ul {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+article {
+    width: 100%;
+   
+}
+
+.imgHome {
+    background-image: url("./assets/homeadote.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: auto;
+    
+}
+
+/* .imgSobreMim {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    /* background-image: url("./assets/Design\ sem\ nome\ -\ 2024-05-01T171245.108.png"); */
+    /* border: solid red 5px;
+    height: 650px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */ 
+
+
+.imgSobreMim {
+    
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: space-between;
+    align-items: center;
+    border: solid red 5px;
+    height: 650px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.textoEsquerda{
+    float: left;
+    width: 50%;
+    flex: 7;
+}
+
+.imgSobreMim .fotoDireita {
+   float: right;
+    max-width: 100%;
+    /* margin-left: 1000px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid purple 5px;
+}
