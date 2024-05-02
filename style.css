@@ -1,3 +1,6 @@
+*{font-family: "Roboto", sans-serif;}
+
+
 body {
     width: 100%;
     margin: auto;
@@ -8,11 +11,12 @@ body {
 
 }
 
+
+
 nav {
     height: 60px;
     width: 100%;
     background-color: #57233A;
-    
 }
 
 nav ul {
@@ -27,62 +31,181 @@ nav ul li {
     list-style-type: none;
 }
 
-main {
+nav ul li button {
+    border-radius: 5px;
+    background-color: #B98D72;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+}
+
+nav ul li button:hover{
+    background-color: #AE4951;
+    cursor: pointer;
+}
+
+
+.estrutura {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-direction: column;
+    margin: 0;
 }
 
 article {
     width: 100%;
-   
 }
 
 .imgHome {
     background-image: url("./assets/homeadote.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    width: auto;
+    height: 100vh;
+    width: 100%;
     
 }
 
-/* .imgSobreMim {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    margin-bottom: 10px;
-    flex-direction: column;
-    /* background-image: url("./assets/Design\ sem\ nome\ -\ 2024-05-01T171245.108.png"); */
-    /* border: solid red 5px;
-    height: 650px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-} */ 
-
-
 .imgSobreMim {
-    
     display: flex;
     margin-bottom: 10px;
     flex-direction: space-between;
     align-items: center;
-    border: solid red 5px;
     height: 650px;
+    background-color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .textoEsquerda{
-    float: left;
-    width: 50%;
-    flex: 7;
+    margin-left: 100px;
+    margin-right: 250px;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.textoEsquerda p {
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.textoEsquerda h2 {
+    margin-top: -70px;
+    font-size: 60px;
+    color: #AE4951;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .imgSobreMim .fotoDireita {
-   float: right;
-    max-width: 100%;
-    /* margin-left: 1000px; */
+    width: 500px;
+    height: 550px;
+    background-image: url('./assets/ruthestherfoto.png');
+    border-radius: 30px;
+}
+
+.fotoDireita {
+    margin-right: 100px;
+}
+
+.textoEsquerda button{
+    border-radius: 5px;
+    background-color: #AE4951;
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: transparent;
+    transition: 0.5s;
+    margin-top: 0px;
+    font-size: 20px;
+
+}
+
+.textoEsquerda button:hover{
+    background-color: #57233A;
+    cursor: pointer;
+}
+
+.line {
+    margin-left: -300px;
+    margin-top: 100px;
+    left: 0;
+    width: 800px;
+    border: solid #57233A 2px;
+}
+
+.paralax{
+    background-image: url(./assets/fotoparalax.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: solid purple 5px;
+    justify-content: center;
+    font-size: 280px;
+    color: rgba(255, 255, 255, 0.686);
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+}
+
+.botaoAdocao {
+    position: absolute;
+    margin-top: 1004px;
+    margin-left: 1068px;
+}
+
+.botaoAdocao button{
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: #AE4951;
+    cursor: pointer;
+}
+
+.botaoAdocao button:hover{
+    background-color: #57233A;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.movimentoBotao{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+.adocaoTardia {
+    background-image: url(./assets/adocaotardia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+
+}
+.adocaoTardia.titulo{
+    display: flex;
+    flex-direction:column;
+}
+
+.adocaoTardia .titulo .titulo1 p {
+    font-size: 150px;
+    font-weight: 700;
+    color: #57233A;
+    margin-top: 110px;
+    padding-top: 110px;
+    padding-left: 50px;
+    margin-bottom: 0;
+    border-top: 2px solid black;
+}
+
+.adocaoTardia .textos{
+    margin-left: 15px;
 }
