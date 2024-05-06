@@ -17,6 +17,8 @@ nav {
     height: 60px;
     width: 100%;
     background-color: #57233A;
+    position: fixed;
+    top: 0;
 }
 
 nav ul {
@@ -25,6 +27,19 @@ nav ul {
     justify-content: space-around;
     align-items: center;
     color: white;
+}
+
+a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+a:hover{
+transform: scale(1.05);
+font-weight: bold;
 }
 
 nav ul li {
@@ -44,6 +59,7 @@ nav ul li button {
 nav ul li button:hover{
     background-color: #AE4951;
     cursor: pointer;
+    font-weight: bold;
 }
 
 
@@ -60,12 +76,36 @@ article {
 }
 
 .imgHome {
-    background-image: url("./assets/homeadote.png");
+    background-image: url(./assets/fotoinicial.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    
+    flex-direction: column;
+}
+
+.imgHome .frase1 {
+font-size: 50px;
+color: black;
+margin-top: 200px;
+margin-left: 70px;
+margin-bottom: 10px;
+}
+
+.imgHome .frase2 {
+font-size: 42px;
+color: white;
+margin-top: 28px;
+margin-left: 70px;
+display: inline;
+}
+
+.frase2 {
+background-color: #B98D72;
+padding: 5px; 
+border-radius: 12px;
+letter-spacing: 0.9px;
+text-shadow: 0.8px;
 }
 
 .imgSobreMim {
@@ -92,7 +132,7 @@ article {
 }
 
 .textoEsquerda h2 {
-    margin-top: -70px;
+    margin-top: -50px;
     font-size: 60px;
     color: #AE4951;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -111,7 +151,7 @@ article {
 
 .textoEsquerda button{
     border-radius: 5px;
-    background-color: #AE4951;
+    background-color: #B98D72;
     color: white;
     width: 150px;
     height: 40px;
@@ -123,7 +163,7 @@ article {
 }
 
 .textoEsquerda button:hover{
-    background-color: #57233A;
+    background-color: #AE4951;
     cursor: pointer;
 }
 
@@ -132,7 +172,7 @@ article {
     margin-top: 100px;
     left: 0;
     width: 800px;
-    border: solid #57233A 2px;
+    border: solid #57233A 1px;
 }
 
 .paralax{
@@ -152,8 +192,8 @@ article {
 
 .botaoAdocao {
     position: absolute;
-    margin-top: 1004px;
-    margin-left: 1068px;
+    margin-top: 100px;
+    margin-left: 930px;
 }
 
 .botaoAdocao button{
@@ -166,12 +206,14 @@ article {
     font-size: 20px;
     background-color: #AE4951;
     cursor: pointer;
+    border: solid white 1px;
 }
 
 .botaoAdocao button:hover{
     background-color: #57233A;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
 }
 .movimentoBotao{
     width: 100vw;
@@ -188,7 +230,7 @@ article {
     width: 100%;
     height: 600px;
     display: flex;
-
+    flex-direction: column;
 }
 .adocaoTardia.titulo{
     display: flex;
@@ -196,16 +238,220 @@ article {
 }
 
 .adocaoTardia .titulo .titulo1 p {
-    font-size: 150px;
+    width: fit-content;
+    font-size: 170px;
     font-weight: 700;
     color: #57233A;
     margin-top: 110px;
-    padding-top: 110px;
+    padding-top: 45px;
     padding-left: 50px;
     margin-bottom: 0;
-    border-top: 2px solid black;
+    border-top: 2px solid #57233A;
+    border-top-width: 2px solid #57233A;
 }
+
+.adocaoTardia .titulo .titulo2 p {
+    font-size: 207px;
+    font-weight: 700;
+    letter-spacing: 0.2vw;
+    color: #57233A;
+    margin-top: -42px;
+    padding-top: 0px;
+    padding-left: 50px;
+    margin-bottom: -40px;
+}
+
+.titulo3 p {
+    font-size: 68px;
+    font-weight: 700;
+    color: #B98D72;
+    margin-top: -5px;
+    letter-spacing: 0.7vw;
+    padding-left: 50px;
+    margin-bottom: 0;
+}
+
+.alinhar {
+    display: flex;
+    align-items: center;
+}
+
+.botaoTardia button{
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: #AE4951;
+    cursor: pointer;
+
+}
+
+.botaoTardia button:hover{
+    background-color: #B98D72;
+    cursor: pointer;
+    color: #57233A;
+    font-weight: bold;
+
+}
+
 
 .adocaoTardia .textos{
     margin-left: 15px;
 }
+
+.relatos{
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(white , #D3D3D3 );
+    flex-direction: column;
+
+}
+
+.relatos .fraseRelato {
+    flex-direction: column;
+    color: #AE4951;
+    font-size: 40px;
+    margin-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    display: inline;
+    background-color: white;
+    padding: 8px;
+    border-radius: 7px;
+    text-shadow: 0.8px;
+    border-bottom: 1px solid white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video {
+    flex-direction: column;
+  
+}
+
+.video iframe{
+
+    width: 490px;
+    height: 300px;
+    margin-top: 40px;
+  
+}
+
+
+.relatoBotao button{
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: #AE4951;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.relatoBotao button:hover{
+    background-color: #57233A;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+
+}
+
+.quiz {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz .fotoQuiz img {
+   max-width: 680px;
+   max-height: 680px;
+   margin-top: 30px;
+   
+
+}
+.fraseQuiz {
+    font-size: 90px;
+    color: #AE4951;
+    font-weight: 1000;
+    margin-top: -50px;
+    margin-left: 60px;
+}
+
+.botaoQuiz button {
+    color: white;
+    border-radius: 5px;
+    width: 190px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: #57233A;
+    cursor: pointer;
+    margin-left: 70px;
+}
+
+.botaoQuiz button:hover{
+    background-color: #B98D72;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+ .linha {
+    border-bottom: 2px solid #57233A;
+    width: 100%;
+    margin-top: 60px;
+}
+
+footer {
+    width: 100%;
+    display: block;
+    background-color: #ccc;
+    
+}
+.rodapeLeft{
+    margin-left: 200px;
+    align-items: center;
+}
+
+.rodapeRight{
+    margin-left: 700px;
+    align-content: center;
+
+    
+}
+
+footer a {
+    color: black;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+footer hr {
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+
+}
+
+ .info .fotoFooter {
+    display: flex;
+    margin-left: -50px;
+ }
