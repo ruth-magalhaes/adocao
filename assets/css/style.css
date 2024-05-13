@@ -76,7 +76,7 @@ article {
 }
 
 .imgHome {
-    background-image: url(./assets/fotoinicial.png);
+    background-image: url(../img/fotoinicial.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -141,7 +141,7 @@ text-shadow: 0.8px;
 .imgSobreMim .fotoDireita {
     width: 500px;
     height: 550px;
-    background-image: url('./assets/ruthestherfoto.png');
+    background-image: url('../img/ruthestherfoto.png');
     border-radius: 30px;
 }
 
@@ -176,7 +176,7 @@ text-shadow: 0.8px;
 }
 
 .paralax{
-    background-image: url(./assets/fotoparalax.png);
+    background-image: url(../img/fotoparalax.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -224,7 +224,7 @@ text-shadow: 0.8px;
 }
 
 .adocaoTardia {
-    background-image: url(./assets/adocaotardia.png);
+    background-image: url(../img/adocaotardia.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
