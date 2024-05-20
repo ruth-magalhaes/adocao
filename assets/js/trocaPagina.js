@@ -1,3 +1,7 @@
 function saibaMais() {
-    window.location.href ='../../view/sobremim.html';
+    window.location.href ='sobremim.html';
+}
+
+function logar() {
+    window.location.href ='login.html';
 }

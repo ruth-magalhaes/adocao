@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>ADOÇÃO</title>
     <link rel="stylesheet" href="../assets/css/adocao.css">
+    <link rel="icon" href="../assets/img/logoCoracao.png"> 
 </head>
 <body>
     <nav>
@@ -13,10 +19,10 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="sobremim.html">SOBRE MIM</a></li>
             <li><a href="adocao.html">ADOÇÃO</a></li>
-            <li><a href="">ADOÇÃO TARDIA</a></li>
-            <li><a href="">RELATOS</a></li>
-            <li><a href="">QUIZ</a></li>
-            <li><button>LOGIN</button></li>
+            <li><a href="tardia.html">ADOÇÃO TARDIA</a></li>
+            <li><a href="relatos.html">RELATOS</a></li>
+            <li><a href="quiz.html">QUIZ</a></li>
+            <li><a href="login.html"><button>LOGIN</button></a></li>
 
         </ul>
     </nav>
@@ -34,6 +40,31 @@
 <hr>
             <div class="passo">PASSO A PASSO</div>
             <div class="passo1">para adotar</div>
+            <div id="passos">
+
+                <div class="passo01"><span class="numero1"> 1 </span> <span class="textoPasso">
+                    É preciso desejar ser pai ou mãe e ter mais de 18 anos,não ser nem avós, nem irmãos do adotando.
+                </span> </div> 
+                <div class="passo02"><span class="numero2"> 2 </span> <span class="textoPasso"> Procure a Vara da Infância e da Juventude mais próxima de sua residência para orientações ou acesse <b style="cursor: pointer;" onclick="siteAdocao()">www.cnj.jus.br/sna</b> e faça seu cadastro! </span></div>
+                 <div class="passo03"><span class="numero3"> 3 </span> <span class="textoPasso"> Apresente a documentação necessária </span> </div> 
+                 <div class="passo04"><span class="numero4"> 4 </span> <span class="textoPasso"> TJSP entra em contato para informar o número do processo e agendar a data da entrevista inicial. Avaliações técnicas, psicológica e social, e orientações para o curso preparatório obrigatório
+                 que esclarecerá dúvidas e expectativas </span></div> 
+                 <div class="passo05"><span class="numero5"> 5 </span> <span class="textoPasso">Após o curso e avaliações técnicas, o processo vai para o Ministério Público e para a decisão do juiz. Com a sentença favorável, você está apto a adotar no perfil desejado em todo território
+                 nacional e, se desejar, o cadastro respeitará o território estadual em que você reside. </span></div> 
+                 <div class="passo06"><span class="numero6"> 6 </span> <span class="textoPasso">Após o cruzamento dos perfis dos pretendentes e das crianças do Cadastro Nacional de Adoção no Sistema Nacional de Adoção e Acolhimento (SNA) a Vara da Infância e da Juventude entra em contato para você conhecer a criança, sua história e para informar sobre a possibilidade de se iniciar o estágio de convivência </span></div>
+                 <div class="passo07"><span class="numero7"> 7 </span> <span class="textoPasso"> Durante o estágio de convivência, o setor técnico realiza avaliação Social e Psicológica apresenta o relatório para o Ministério Público e ao juiz para a decisão final </span></div> 
+            </div>
+
+
+                <!--  -->
+
+
+
     </main>
 </body>
 </html>
+<script>
+    function siteAdocao() {
+        window.open("https://sna.cnj.jus.br/#/home","_blank")
+    }
+</script>

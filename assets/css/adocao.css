@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    overflow-x: hidden;
 }
 
 
@@ -19,6 +19,7 @@ nav {
     background-color: #57233A;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 nav ul {
@@ -99,7 +100,7 @@ nav ul li button:hover{
 
 .fraseT3 {
     font-size: 20px;
-    color: #57233A;
+    color: white;
     background-color: #B98D72;
     padding: 8px;
     border-radius: 5px;
@@ -130,7 +131,6 @@ hr {
     margin-top: 70px;
     letter-spacing: -2px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 .passo1 {
@@ -139,4 +139,148 @@ hr {
     letter-spacing: 4px;
     font-weight: bolder;
     margin-top: -10px;
+}
+
+#passos {
+    width: 70vw;
+}
+
+.passo01 {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.passo02 {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.passo03 {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.passo04 {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.passo05 {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.passo06 {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.passo07 {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+
+.passo01 .numero1 {
+    display: inline-block;
+    position: relative;
+    background-color: #B98D72;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+   
+    
+}
+
+
+.passo02 .numero2 {
+    display: inline-block;
+    position: relative;
+    background-color: #AE4951;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+    margin-top: 16px;
+    
+}
+
+.passo03 .numero3 {
+    display: inline-block;
+    position: relative;
+    background-color: #57233A;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+    margin-top: 16px;
+    
+}
+
+.passo04 .numero4 {
+    display: inline-block;
+    position: relative;
+    background-color: #B98D72;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+    margin-top: 16px;
+    
+}
+
+.passo05 .numero5 {
+    display: inline-block;
+    position: relative;
+    background-color: #AE4951;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+    margin-top: 16px;
+    
+}
+
+.passo06 .numero6 {
+    display: inline-block;
+    position: relative;
+    background-color: #57233A;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+    margin-top: 16px;
+    
+}
+
+.passo07 .numero7 {
+    display: inline-block;
+    position: relative;
+    background-color: #B98D72;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    margin-right: 1vw;
+    margin-top: 16px;
+}
+
+.numero1, .numero2, .numero3, .numero4, .numero5, .numero6, .numero7 {
+    color: white;
+    text-shadow: 2px;
+    font-weight: bold;
 }
