@@ -44,21 +44,21 @@
                 </div>
                 <div class="direita">
                     <span class="login"> FAÇA SEU LOGIN <br><br></span>
-                    <span > email <br><input type="text" id="input_email" class="email"
+                    <span> email <br><input type="text" id="input_email" class="email"
                             placeholder="email"><br><br></span>
-                            
 
 
-                            <span class="senha">senha<br>
 
-                                <div class="senhas">
+                    <span class="senha">senha<br>
+                        <div class="senhas">
                             <div class="inputSenha">
-                                <input type="password" id="input_senha" class="senha" placeholder="senha">
-                                <div id="botao_ocultar" class="olho" onclick="ocultar()">
-                                    <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
-                                </div>
-                            </div>
 
+                                <input type="password" id="input_senha" class="senha" placeholder="senha">
+                            </div>
+                            <div id="botao_ocultar" class="olho" onclick="ocultar()">
+                                <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
+
+                            </div>
                         </div>
 
                     </span><br><br>
@@ -76,7 +76,7 @@
 </html>
 
 <script>
-    function ocultar(){
+    function ocultar() {
         if (input_senha.type == "password") {
             input_senha.type = "text";
             botao_ocultar.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_fechado.png">';

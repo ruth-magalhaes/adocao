@@ -93,16 +93,53 @@ nav ul li button:hover {
     margin-top: 30px;
 }
 
+.cadastro .senhaS{
+    display: flex;
+    flex-direction: row;
+}
 
-.nome, .email, .senha, .confirma {
+.olho img {
+    width: 24px;
+}
+
+#botao_ocultar {
+    border: 2px solid #57233A;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    margin-right: 13px;
+    border-left: none;
+    width: 32px;
+    height: 32px;
+}
+
+.tituloCadastro {
+    font-size: 24px;
+    color: #57233A;
+    font-weight: 900;
+}
+
+.nome, .email {
+    width: 210px;
+    padding: 10px 15px;
+    border: 2px solid #57233A;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-top: -110px; */
+}
+
+.senha, .confirma {
     width: 180px;
     padding: 10px 15px;
     border: 2px solid #57233A;
-    border-radius: 20px; 
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
     outline: none;
     font-size: 10px;
     font-weight: 300;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .telaLogin a {

@@ -37,17 +37,27 @@
 
         <div class="imgLogin">
             <div class="telaLogin">
-                <div class="cadastro"> FAÇA SEU CADASTRO<br><br>
+                <div class="tituloCadastro">FAÇA SEU CADASTRO
+                <div> nome: <br> <input type="text" id="input_nome" class="nome"> </div><br>
+                <div> email:<br> <input type="text" id="input_email" class="email"> </div><br></div>
+                <div class="cadastro"> <br><br>
+                    <div> senha: <br>  </div>
+                    <div class="senhaS">
+                        <input type="password" id="input_email" class="senha">
+                        <div id="botao_ocultar" class="olho" onclick="ocultar()">
+                            <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
+                        </div>
+                    </div><br>
+                    <div> confirmar senha: <br>
+                        <div class="senhaS">
+                            <input type="password" id="input_confirmar" class="confirma">
+                            <div id="botao_ocultar" class="olho" onclick="ocultar()">
+                                <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
+                            </div>
+                        </div>
 
-                    <div > nome: <br> <input type="text" id="input_nome" class="nome"> </div><br>
-                    <div > email:<br> <input type="text" id="input_email" class="email"> </div><br>
-                    <div > senha: <br> <input type="password" id="input_email" class="senha"> </div><br>    <div id="botao_ocultar" class="olho" onclick="ocultar()">
-                        <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
                     </div>
-                    <div> confirmar senha: <br> <input type="password" id="input_confirmar" class="confirma"><br> </div>    <div id="botao_ocultar" class="olho" onclick="ocultar()">
-                        <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
-                    </div>
-                   <a href="login.html"><br><button class="bot">cadastrar</button></a> 
+                    <a href="login.html"><br><button class="bot">cadastrar</button></a>
                 </div>
             </div>
 
@@ -58,7 +68,8 @@
 </html>
 
 <script>
-    function ocultar(){
+    function ocultar() {
+        function ocultar() {
         if (input_senha.type == "password") {
             input_senha.type = "text";
             botao_ocultar.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_fechado.png">';
@@ -67,4 +78,5 @@
             botao_ocultar.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_aberto.png">';
         }
     }
+}
 </script>

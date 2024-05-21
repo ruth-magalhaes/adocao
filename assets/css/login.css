@@ -149,7 +149,7 @@ nav ul li button:hover {
     width: 200px;
     padding: 10px 20px;
     border: 2px solid #57233A;
-    border-radius: 25px; 
+    border-radius: 25px;
     outline: none;
     font-size: 16px;
 
@@ -174,11 +174,22 @@ nav ul li button:hover {
 
 .senhas {
     display: flex;
-    align-items: flex-end;
     position: relative;
+    align-items: center;
+    flex-direction: row-reverse;
 }
+
 .senhas .inputSenha {
-   flex-grow: 1;
+    flex-grow: 1;
+}
+
+.senhas .inputSenha input {
+    width: 200px;
+    padding: 10px 20px;
+    border: 2px solid #57233A;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
 }
 
 
@@ -193,7 +204,7 @@ nav ul li button:hover {
     width: 200px;
     padding: 10px 20px;
     border: 2px solid #57233A;
-    border-radius: 25px; 
+    border-radius: 25px;
     outline: none;
     font-size: 16px;
 }
@@ -202,6 +213,8 @@ nav ul li button:hover {
     width: 24px;
 }
 
-#botao_ocultar{
+#botao_ocultar {
     cursor: pointer;
+    margin-right: 13px;
+    margin-top: 6px;
 }
