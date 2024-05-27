@@ -8,4 +8,9 @@ router.get("/buscarUltimasMedidas", function (req, res) {
 });
 
 
+router.get("/listar", function (req, res) {
+    dashController.listar(req, res);
+});
+
+
 module.exports = router;
