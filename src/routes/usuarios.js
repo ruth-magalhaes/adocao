@@ -16,4 +16,8 @@ router.post("/finalizar/:idUsuario", function (req, res) {
     usuarioController.finalizar(req, res);
 });
 
+router.get("/updateFK", function (req, res) {
+    usuarioController.updateFK(req, res);
+});
+
 module.exports = router;

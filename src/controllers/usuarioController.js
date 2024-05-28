@@ -103,9 +103,35 @@ function finalizar(req, res) {
     }
 }
 
+function updateFK (req, res) {
+    var fkUsuario = sessionStorage.ID_USUARIO;
+
+    if (fkUsuario == null) {
+        console.log('idUsuario undefined');
+    } else {
+        console.log('idUsuario Update Sucesso');
+        usuarioModel.updateFK(fkUsuario)
+                .then(
+                    function (resultado) {
+                        res.json(resultado);
+                    }
+                ).catch(
+                    function (erro) {
+                        console.log(erro);
+                        console.log(
+                            "\nHouve um erro ao realizar o update da FK! Erro: ",
+                            erro.sqlMessage
+                        );
+                        res.status(500).json(erro.sqlMessage);
+                    }
+                );
+    }
+
+}
 
 module.exports = {
     autenticar,
     cadastrar,
-    finalizar
+    finalizar,
+    updateFK
 }
