@@ -61,10 +61,10 @@ function listar(req, res) {
 // }
 
 function publicar(req, res) {
-    var titulo = req.body.titulo;
-    var descricao = req.body.descricao;
+    var titulo = req.params.titulo;
+    var descricao = req.params.descricao;
     var idUsuario = req.params.idUsuario;
-    var idRelatos = req.body.idRelatos;
+    var idRelatos = req.params.idRelatos;
 
     if (titulo == undefined) {
         res.status(400).send("O título está indefinido!");

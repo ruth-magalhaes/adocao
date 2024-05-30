@@ -104,7 +104,7 @@ function finalizar(req, res) {
 }
 
 function updateFK (req, res) {
-    var fkUsuario = sessionStorage.ID_USUARIO;
+    var fkUsuario = req.body.fkUsuarioServer;
 
     if (fkUsuario == null) {
         console.log('idUsuario undefined');

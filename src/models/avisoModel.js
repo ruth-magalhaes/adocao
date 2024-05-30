@@ -3,11 +3,7 @@ var database = require("../database/config");
 function listar() {
     console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucaoSql = `
-    SELECT usuario.idUsuario, nome, email, senha, COUNT(idRelatos) as totalRelatos
-FROM usuario
-LEFT JOIN questionario ON questionario.fkUsuario = usuario.idUsuario
-LEFT JOIN relatos ON relatos.fkQuestionario = questionario.idQuestionario
-GROUP BY usuario.idUsuario, nome, email;
+    select titulo, descricao, nome, fkUsuario;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -18,7 +14,7 @@ GROUP BY usuario.idUsuario, nome, email;
 function publicar(titulo, descricao, idUsuario, idRelatos) {
     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", titulo, descricao, idUsuario);
     var instrucaoSql = `
-        INSERT INTO relatos (titulo, descricao, idRelatos, fkQuestionario) VALUES ('${titulo}', '${descricao}', ${idRelatos}, ${idUsuario});
+        INSERT INTO relatos (titulo, descricao, idRelatos, fkUsuario) VALUES ('${titulo}', '${descricao}', ${idRelatos}, ${idUsuario});
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

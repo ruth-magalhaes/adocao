@@ -8,9 +8,20 @@ router.get("/buscarUltimasMedidas", function (req, res) {
 });
 
 
-router.get("/listar", function (req, res) {
-    dashController.listar(req, res);
+router.get("/pergunta1", function (req, res) {
+    dashController.pergunta1(req, res);
 });
 
+router.get("/pergunta2", function (req, res) {
+    dashController.pergunta2(req, res);
+});
+
+router.get("/pergunta3", function (req, res) {
+    dashController.pergunta3(req, res);
+});
+
+router.get("/pergunta4", function (req, res) {
+    dashController.pergunta4(req, res);
+});
 
 module.exports = router;
