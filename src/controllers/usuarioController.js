@@ -65,6 +65,57 @@ function cadastrar(req, res) {
     }
 
 
+
+
+    function pontuacao(req, res) {
+        // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+       var pontuacao = req.body.pontuacaoServer; 
+       var idUsuario = req.body.idUsuarioServer;
+       var fkQuiz = req.body.fkQuizServer;
+    
+    
+            // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+            usuarioModel.pontuacao(pontuacao, idUsuario, fkQuiz)
+                .then(
+                    function (resultado) {
+                        res.json(resultado);
+                    }
+                ).catch(
+                    function (erro) {
+                        console.log(erro);
+                        console.log(
+                            "\nHouve um erro ao realizar o envio da pontuação controller! Erro: ",
+                            erro.sqlMessage
+                        );
+                        res.status(500).json(erro.sqlMessage);
+                    }
+                );
+        }
+
+        function quiz(req, res) {
+            // Crie uma variável que vá recuperar os valores do arquivo cadastro.html 
+           var idUsuario = req.body.idUsuarioServer;
+        
+        
+                // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+                usuarioModel.quiz(idUsuario)
+                    .then(
+                        function (resultado) {
+                            res.json(resultado);
+                        }
+                    ).catch(
+                        function (erro) {
+                            console.log(erro);
+                            console.log(
+                                "\nHouve um erro ao realizar o envio do quiz! Erro: ",
+                                erro.sqlMessage
+                            );
+                            res.status(500).json(erro.sqlMessage);
+                        }
+                    );
+            }
+
+
 function finalizar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo Site_Quiz.html
     var input1 = req.body.input1Server;
@@ -129,9 +180,27 @@ function updateFK (req, res) {
 
 }
 
+function buscarQuiz (req, res) {
+    usuarioModel.buscarQuiz().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 module.exports = {
     autenticar,
     cadastrar,
     finalizar,
-    updateFK
+    pontuacao,
+    updateFK,
+    buscarQuiz,
+    quiz
 }

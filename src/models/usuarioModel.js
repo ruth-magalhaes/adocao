@@ -26,6 +26,17 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucaoSql);
 }
 
+
+function pontuacao(pontuacao, idUsuario, fkQuiz) {
+    var instrucaoSql = `
+    insert into pontuacao (idPontuacao, pontuacao, fkUsuario, fkQuiz) values
+    (${fkQuiz}, ${pontuacao}, ${idUsuario}, ${fkQuiz});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
 function finalizar(input1, input2, input3, input4, fk_Pergunta_Usuario) {
     console.log("Finalizando questionário para o usuário:", fk_Pergunta_Usuario);
     var instrucaoSql = `
@@ -41,9 +52,22 @@ function updateFK(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function quiz(idUsuario) {
+    var instrucaoSql = `insert into quiz (fkUsuario) values (${idUsuario});`
+    return database.executar(instrucaoSql);
+}
+
+function buscarQuiz() {
+    var instrucaoSql = `select idQuiz from quiz order by idQuiz desc limit 1;`
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
     finalizar,
-    updateFK
+    pontuacao,
+    updateFK,
+    buscarQuiz, 
+    quiz
 };

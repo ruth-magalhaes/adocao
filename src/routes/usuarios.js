@@ -20,4 +20,16 @@ router.get("/updateFK", function (req, res) {
     usuarioController.updateFK(req, res);
 });
 
+router.post("/pontuacao", function (req, res) {
+    usuarioController.pontuacao(req, res);
+});
+
+router.post("/quiz", function (req,res) {
+    usuarioController.quiz(req, res);
+});
+
+router.get("/buscarQuiz", function (req,res) {
+    usuarioController.buscarQuiz(req, res);
+});
+
 module.exports = router;
