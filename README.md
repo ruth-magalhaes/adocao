@@ -24,4 +24,4 @@ Dessa forma, o site pretende inspirar, fornecer informações, esclarecer dúvid
 
 ## Instituição
 
-Análise e Desenvolvimento de Sistemas – São Paulo Tech School, São Paulo, 2024
+São Paulo Tech School | Análise e Desenvolvimento de Sistemas 
