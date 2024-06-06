@@ -1,0 +1,220 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #57233A;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+a {
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li button {
+    border-radius: 5px;
+    background-color: #B98D72;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+}
+
+nav ul li button:hover {
+    background-color: #AE4951;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.imgLogin {
+    background-image: url('../assets/img/FOTO13.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 641px;
+    width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.imgLogin .telaLogin {
+    width: 380px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: white;
+    border-radius: 15px;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.cadastro {
+    color: #57233A;
+    font-weight: 900;
+    font-size: 22px;
+    margin-top: -65px;
+}
+
+.senhas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: -1px;
+    margin-left: 13px;
+}
+
+.inputSenha {
+    display: flex;
+}
+
+.olho img {
+    margin-top: 5px;
+    width: 22px;
+}
+
+#botao_ocultar1, #botao_ocultar2 {
+    border: 2px solid #57233A;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    border-left: none;
+    width: 32px;
+    height: 32px;
+}
+
+.tituloCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    color: #57233A;
+    font-weight: 900;
+}
+
+.nome,
+.email,
+.senha,
+.confirma {
+    width: 210px;
+    padding: 10px 15px;
+    border: 2px solid #57233A;
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 10px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* margin-top: -110px; */
+}
+
+.campo {
+    font-size: 15px;
+}
+
+.nome {
+    width: 210px;
+    padding: 10px 15px;
+    border: 2px solid #57233A;
+    border-radius: 20px;
+    outline: none;
+    font-size: 10px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.senha,
+.confirma {
+    width: 180px;
+    padding: 10px 15px;
+    border: 2px solid #57233A;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 10px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.telaLogin a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+.bot {
+    border-radius: 5px;
+    background-color: #AE4951;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.bot:hover {
+    background-color: #B98D72;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ #mensagem_erro {
+    color: rgb(156, 9, 9);
+    font-size: 15px;
+ }

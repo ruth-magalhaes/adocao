@@ -1,0 +1,182 @@
+*{font-family: "Roboto", sans-serif;}
+
+
+body {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #57233A;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+a:hover{
+transform: scale(1.05);
+font-weight: bold;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li button {
+    border-radius: 5px;
+    background-color: #B98D72;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: transparent;
+    transition: 0.5s;
+}
+
+nav ul li button:hover{
+    background-color: #AE4951;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.aTela {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fraseAdocao {
+    color: #57233A;
+    font-size: 62px;
+    margin-top: 130px;
+    font-weight: 900;
+    animation: fadeIn 4s; 
+}
+
+.fraseTardia {
+    color: #57233A;
+    font-size: 70px;
+    margin-top: 2px;
+    font-weight: 900;
+    animation: fadeIn 4s;
+    animation-delay: 0s; 
+}
+
+.texto {
+margin-top: -45px;
+    font-size: 20px;
+    width: 65vw;
+}
+
+.fotoGrafico {
+    width: 100%;
+    height: 500px;
+    background-image: url(../assets/img/grafico2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    background-position: center center;
+}
+
+.texto2 {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 65vw;
+    
+}
+
+.interesse {
+    font-size: 30px;
+    font-weight: 900;
+    color: #AE4951;
+    align-items: center;
+    display: flex;
+    margin-top: 65px;
+    width: 100%;
+}
+
+.detalhes {
+    margin-top: 40px;
+    font-size: 20px;
+    width: 65vw;
+}
+
+footer {
+    width: 1349px;
+    display: block;
+    background-color: #ccc;
+    
+}
+.rodapeLeft{
+    margin-left: 200px;
+    align-items: center;
+}
+
+.rodapeRight{
+    margin-left: 700px;
+    align-content: center;
+
+    
+}
+
+
+ footer { margin-top: auto; 
+    background-color: #57233A; 
+    padding: 20px 0; 
+    text-align: center; 
+} 
+    
+    .footer-container { display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    } 
+    
+    .footer-icon { 
+        margin: 0 10px; 
+    } 
+    .footer-icon img { 
+        width: 30px; 
+        height: 30px; 
+        transition: transform 0.3s; 
+    } 
+    
+    .footer-icon img:hover { 
+        transform: scale(1.1); }

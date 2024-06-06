@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./assets/img/logoCoracao.png">
+    <script src="js/trocaPagina.js"></script>
+    <title> ADOTE | HOME </title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <img src="./assets/img/logocora.png" alt="logo" width="80px">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="HTML/sobremim.html">SOBRE MIM</a></li>
+            <li><a href="HTML/adocao.html">ADOÇÃO</a></li>
+            <li><a href="HTML/tardia.html">ADOÇÃO TARDIA</a></li>
+            <li id="navRelatos"><a href="HTML/relatos.html">RELATOS</a></li>
+            <li id="navQuiz"><a href="HTML/quiz.html">QUIZ</a></li>
+            <li><a href="HTML/login.html">
+                    <button>LOGIN</button></li>
+            </a>
+
+        </ul>
+    </nav>
+
+    <main class="estrutura">
+
+        <div class="imgHome">
+            <div class="frase1">ADOTE O AMOR,<br>A <b>ESPERANÇA</b> E<br>A OPORTUNIDADE. </div>
+            <div class="frase2"><i>adote com o coração!</i></div>
+        </div>
+        <div class="imgSobreMim">
+            <div class="textoEsquerda"><br><br>
+                <h2>SOBRE MIM</h2>
+                <br><br>
+                <p>A questão da adoção surgiu em <br>minha vida com a chegada da
+                    minha<br>irmã, desde então sou voluntária em <br><b>abrigos infantis</b> e busco abordar mais
+                    <br>sobre
+                    o <b>processo e a importância</b> da <br>adoção para as pessoas.
+                </p>
+                <button onclick="saibaMais()">SAIBA MAIS</button>
+
+                <div class="line"></div>
+            </div>
+            <div class="fotoDireita"></div>
+
+        </div>
+
+        <div class="paralax">
+            <b class="texto">ADOÇÃO</b>
+            <div class="botaoAdocao">
+                <button onclick="adotar()">SAIBA MAIS</button>
+            </div>
+
+        </div>
+        <div class="adocaoTardia">
+            <div class="titulo">
+                <div class="titulo1">
+                    <p>ADOÇÃO</p>
+                </div>
+                <div class="titulo2">
+                    <p>TARDIA</p>
+                </div>
+            </div>
+            <div class="alinhar">
+                <div class="titulo3">
+                    <p>você sabe o que é?</p>
+                </div>
+                <div class="botaoTardia"><button onclick="adotarTardia()">SAIBA MAIS</button></div>
+            </div>
+            <div class="textos">
+
+            </div>
+        </div>
+
+        <div class="relatos">
+            <div class="fraseRelato">RELATOS SOBRE ADOÇÃO</div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jpAFUvsLhKk?si=Y64mAbOaS7mWWQ3S"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="relatoBotao"><button onclick="relatar()">CLIQUE AQUI</button></div>
+        </div>
+        <div class="quiz">
+            <div class="fotoQuiz"> <img src="./assets/img/fotodoquiz.png" alt="foto"> </div>
+            <div class="fraseQuiz">QUIZ</div>
+            <div class="botaoQuiz"><button onclick="fazerQuiz()">FAÇA SEU QUIZ</button></div>
+        </div>
+    
+    </main>
+
+    <br><br><br><br>
+
+<footer> <div class="footer-container"> <a href="mailto:ruth.magalhaes@sptech.school" class="footer-icon" title="Enviar e-mail"> <img src="/assets/img/email.png" alt="E-mail"> </a> <a href="https://wa.me/5511961155011" class="footer-icon" target="_blank" title="Enviar WhatsApp"> <img src="/assets/img/whatsapp.png" alt="WhatsApp"> </a>
+
+    <p style="color: white;">© 2024 ADOTE - Todos os direitos reservados.</p>
+</div> </footer> 
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
+
+<script>
+
+    if (sessionStorage.ID_QUESTIONARIO == undefined) {
+        navRelatos.style.display = 'none';
+        navQuiz.style.display = 'none';
+
+
+    } else {
+        navRelatos.style.display = 'unset';
+        navQuiz.style.display = 'unset';
+    }
+
+</script>

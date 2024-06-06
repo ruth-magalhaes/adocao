@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/tardia.css">
+    <link rel="icon" href="../assets/img/logoCoracao.png">
+    <title>ADOTE | TARDIA</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <img src="../assets/img/logocora.png" alt="logo" width="80px">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="sobremim.html">SOBRE MIM</a></li>
+            <li><a href="adocao.html">ADOÇÃO</a></li>
+            <li><a href="tardia.html">ADOÇÃO TARDIA</a></li>
+            <li id="navRelatos"><a href="relatos.html">RELATOS</a></li>
+            <li id="navQuiz"><a href="quiz.html">QUIZ</a></li>
+            <li><a href="login.html">
+                <button>LOGIN</button></li>
+            </a>
+
+        </ul>
+    </nav>
+
+    <main>
+        <div class="aTela">
+            <div class="fraseAdocao">ADOÇÃO</div>
+            <div class="fraseTardia">TARDIA</div>
+        </div>
+<div class="texto">A adoção tardia, também conhecida como adoção de crianças mais velhas, é um processo pelo qual crianças <b style="color: #57233A;"> a partir de 7 anos</b> são adotadas por famílias. Embora a maioria das pessoas associe adoção com bebês e crianças pequenas, há muitas crianças mais velhas que também <b> precisam de lares amorosos e permanentes.</b><br><br>
+
+    A adoção tardia pode ser uma experiência gratificante tanto para a criança/adolescente adotado quanto para a família adotiva. No entanto, um desafio persistente enfrentado por muitas crianças e adolescentes é a falta de demanda por adoção tardia. <b style="color: #57233A;"> <br><br>Enquanto bebês e crianças mais novas frequentemente encontram rapidamente lares adotivos, crianças e adolescentes mais velhos muitas vezes ficam à espera, às margens do sistema de adoção.</b> <br><br><b>Mas por que isso acontece?</b></div>
+
+    <div class="fotoGrafico"></div>
+
+    <div class="texto2">Um dos principais motivos é a <b style="color: #57233A;">percepção errônea de que crianças mais velhas trazem consigo um fardo de problemas emocionais e comportamentais.</b> Essa ideia equivocada pode intimidar potenciais pais adotivos, levando-os a buscar opções mais jovens e, supostamente, menos desafiadoras. No entanto, todas as crianças, independentemente da idade,<b> merecem uma chance de pertencer a uma família amorosa. </b> 
+        <br><br>
+        Além disso, alguns podem pensar que adolescentes são independentes o suficiente para se cuidar, ignorando a necessidade fundamental de amor, <b style="color: #57233A;"> apoio emocional e orientação </b> que todos os jovens precisam durante sua jornada para a vida adulta. No entanto, a verdade é que nenhum adolescente está imune ao desejo de pertencer a uma família, de ter alguém para contar nos bons e maus momentos.</div>
+
+        <div class="interesse">SE INTERESSOU PELA ADOÇÃO TARDIA?</div>
+        <div class="detalhes">Adotar adolescentes e crianças com mais de 7 anos é a maneira mais rápida de realizar o seu sonho de ser pai ou mãe. E, principalmente, de realizar o sonho de quem quer ter alguém pra desejar um simples <b style="color: #57233A;"> “boa noite”.</b><br> Para saber mais sobre algum dos participantes do programa <b style="cursor: pointer; color: #AE4951;" onclick="siteTardia()">clique aqui.</div>
+            
+            <br><br><br><br>
+    </main>
+
+
+    <footer> <div class="footer-container"> <a href="mailto:ruth.magalhaes@sptech.school" class="footer-icon" title="Enviar e-mail"> <img src="../assets/img/email.png" alt="E-mail"> </a> <a href="https://wa.me/5511961155011" class="footer-icon" target="_blank" title="Grupo WhatsApp"> <img src="../assets/img/whatsapp.png" alt="WhatsApp"> </a>
+
+        <p style="color: white;">© 2024 ADOTE - Todos os direitos reservados.</p>
+    </div> 
+</footer> 
+    
+
+</body>
+
+</html>
+
+<script>
+    function siteTardia() {
+        window.open("https://www.tjsp.jus.br/adoteumboanoite","_blank")
+    }
+
+if (sessionStorage.ID_QUESTIONARIO == undefined) {
+    navRelatos.style.display = 'none';
+    navQuiz.style.display = 'none';
+} else {
+    navRelatos.style.display = 'unset';
+    navQuiz.style.display = 'unset';
+}
+
+</script>

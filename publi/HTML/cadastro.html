@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="icon" href="../assets/img/logoCoracao.png">
+    <script src="../js/cadastro.js" defer></script>
+    <script src="../js/trocaPagina.js"></script>
+    <title>ADOTE | CADASTRO</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <img src="../assets/img/logocora.png" alt="logo" width="80px">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="sobremim.html">SOBRE MIM</a></li>
+            <li><a href="adocao.html">ADOÇÃO</a></li>
+            <li><a href="tardia.html">ADOÇÃO TARDIA</a></li>
+            <li id="navRelatos"><a href="relatos.html">RELATOS</a></li>
+            <li id="navQuiz"><a href="quiz.html">QUIZ</a></li>
+            <li><a href="login.html"><button>LOGIN</button></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="imgLogin">
+            <div class="telaLogin">
+                <div class="tituloCadastro">FAÇA SEU CADASTRO
+                    <div class="container">
+                        <p>Nome:</p>
+                        <div class="inputNome">
+                            <input type="text" id="input_nome" class="nome">
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <p>Email:</p>
+                        <div class="inputNome">
+                            <input type="text" id="input_email" class="nome">
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <p>Senha:</p>
+                        <div class="senhas">
+                            <div class="inputSenha">
+                                <input type="password" id="input_senha" class="senha" placeholder="senha">
+                                <div id="botao_ocultar1" class="olho" onclick="ocultar1()">
+                                    <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <p>Confirmar Senha:</p>
+                        <div class="senhas">
+                            <div class="inputSenha">
+                                <input type="password" id="input_confirmar_senha" class="senha" placeholder="senha">
+                                <div id="botao_ocultar2" class="olho" onclick="ocultar2()">
+                                    <img id="olho_ocultar" src="../assets/img/olho_aberto.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <button onclick="cadastrar()" class="bot">cadastrar</button>
+                <div id="mensagem_erro"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function ocultar1() {
+            var input_senha = document.getElementById("input_senha");
+            var botao_ocultar1 = document.getElementById("botao_ocultar1");
+            if (input_senha.type === "password") {
+                input_senha.type = "text";
+                botao_ocultar1.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_fechado.png">';
+            } else {
+                input_senha.type = "password";
+                botao_ocultar1.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_aberto.png">';
+            }
+        }
+
+        function ocultar2() {
+            var input_confirmar_senha = document.getElementById("input_confirmar_senha");
+            var botao_ocultar2 = document.getElementById("botao_ocultar2");
+            if (input_confirmar_senha.type === "password") {
+                input_confirmar_senha.type = "text";
+                botao_ocultar2.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_fechado.png">';
+            } else {
+                input_confirmar_senha.type = "password";
+                botao_ocultar2.innerHTML = '<img id="img_ocultar" src="../assets/img/olho_aberto.png">';
+            }
+        }
+
+        if (sessionStorage.ID_QUESTIONARIO === undefined) {
+            document.getElementById('navRelatos').style.display = 'none';
+            document.getElementById('navQuiz').style.display = 'none';
+        } else {
+            document.getElementById('navRelatos').style.display = 'unset';
+            document.getElementById('navQuiz').style.display = 'unset';
+        }
+
+        
+    </script>
+</body>
+
+</html>

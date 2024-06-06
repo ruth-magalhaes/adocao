@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/questionario.css">
+    <script src="../js/questionario.js"></script>
+
+    <title>ADOTE | QUESTIONARIO</title>
+</head>
+<body>
+
+
+
+    <main>
+
+   <div  class="titulo"> <h2>PREENCHA ESTE FORMULÁRIO</h2> </div>
+    
+<div class="pergunta1">
+    <h3>Você pensa em adotar?</h3>
+    <input type="radio" name="input_opcao" value="1">sim
+ <input type="radio" name="input_opcao" value="0">   não
+</div>
+
+<div class="pergunta2">
+    <h3>Você pensa em adotar quantas crianças/adolescentes?</h3>
+    <input type="radio" name="input_qtd" value="1">1
+   <input type="radio" name="input_qtd" value="2">2 
+   <input type="radio" name="input_qtd" value="3"> 3 ou mais
+   <input type="radio" name="input_qtd" value="0">não penso em adotar
+</div>
+
+<div class="pergunta3">
+    <h3>Você pensa em adotar menino ou menina?</h3>
+    <input type="radio" name="input_genero" value="1"> menino
+   <input type="radio" name="input_genero" value="2"> menina
+   <input type="radio" name="input_genero" value="3"> ambos
+    <input type="radio" name="input_genero" value="0">não penso em adotar
+</div>
+
+
+<div class="pergunta4">
+    <h3>Qual faixa etária você pensa em adotar?</h3>
+    <input type="radio" name="input_idade" value="2">De 0 até 2 anos
+   <input type="radio" name="input_idade" value="6"> De 3 até 6 anos 
+   <input type="radio" name="input_idade" value="17"> De 7 até 17 anos 
+  <input type="radio" name="input_idade" value="0">  não penso em adotar 
+</div>
+<br><br>
+ <button onclick="analisar()">resultado</button> 
+</main>
+</body>
+</html>
+
+<script>
+
+    if (sessionStorage.ID_QUESTIONARIO == undefined) {
+        navRelatos.style.display = 'none';
+        navQuiz.style.display = 'none';
+    } else {
+        navRelatos.style.display = 'unset';
+        navQuiz.style.display = 'unset';
+    }
+
+</script>
