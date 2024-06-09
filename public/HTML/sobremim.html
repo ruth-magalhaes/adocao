@@ -24,8 +24,9 @@
             <li><a href="tardia.html">ADOÇÃO TARDIA</a></li>
             <li id="navRelatos"><a href="relatos.html">RELATOS</a></li>
             <li id="navQuiz"><a href="quiz.html">QUIZ</a></li>
-            <li><a href="login.html">
+            <li id="navLogin"><a href="login.html">
                     <button>LOGIN</button></li>
+            <li id="navSair"><button onclick="sair()">SAIR</button></a></li>
             </a>
 
         </ul>
@@ -71,12 +72,23 @@
 
 <script>
 
-    if (sessionStorage.ID_QUESTIONARIO == undefined) {
+if (sessionStorage.ID_QUESTIONARIO == undefined) {
         navRelatos.style.display = 'none';
         navQuiz.style.display = 'none';
+        navSair.style.display = 'none';
+
+
+
     } else {
         navRelatos.style.display = 'unset';
         navQuiz.style.display = 'unset';
+        navSair.style.display = 'unset';
+        navLogin.style.display = 'none';
+    }
+
+    function sair() {
+        sessionStorage.clear()
+        window.location = '../index.html';
     }
 
 </script>

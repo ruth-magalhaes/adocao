@@ -386,6 +386,11 @@ canvas {
   font-weight: 800;
 }
 
+.btn-nav, .btn-logout  {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .btn-nav button {
   border-radius: 5px;
   background-color: #AE4951;
@@ -394,8 +399,8 @@ canvas {
   height: auto;
   border: transparent;
   transition: 0.5s;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
   display: inline-block;
 }
 

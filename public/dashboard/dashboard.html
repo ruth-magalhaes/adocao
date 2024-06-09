@@ -2,13 +2,13 @@
 <html lang="pt-br">
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADOTE | Dashboard</title>
-    <link rel="icon" href="../assets/img/logoCoracao.png"> 
+    <link rel="icon" href="../assets/img/logoCoracao.png">
 
     <link rel="stylesheet" href="../css/dashboards.css">
     <link rel="stylesheet" href="../css/estilo.css" />
@@ -39,26 +39,27 @@
 
 
             <button div class="btn-nav">
-                
-               <a href="../HTML/relatos.html">Relatos</a> 
+
+                <a href="../HTML/relatos.html">RELATOS</a>
 
             </button>
 
-<button onclick="limparSessao()" div class="btn-logout">
-        
-             <a href="../index.html">SAIR</a> 
+            <button onclick="limparSessao()" div class="btn-logout">
+
+                <a href="../index.html">SAIR</a>
             </button>
 
         </div>
-
         <div id="graficos"
             style="display: flex; align-items: center; justify-content: center; margin-left: 20vw; width: 75vw; height: 100vh; flex-direction: row;">
             <div
                 style="display: flex; align-items: center; justify-content: space-around; height: 100vh; width: 32vw; flex-direction: column; border-radius: 4px;">
+                <h3 style="color: #57233A;">Idade que pretendem adotar</h3>
                 <div id="grafico_4"
                     style="width: 28vw; padding: 0.5vw; background-color: transparent; border-radius: 4px; height: 26vh;">
                     <canvas id="chart_4"></canvas>
                 </div>
+                <h3 style="color: #57233A;">Gênero que pretendem adotar</h3>
                 <div id="grafico_3"
                     style="width: 28vw; padding: 0.5vw; background-color: white; border-radius: 2vw; height: 26vh;">
                     <canvas id="chart_3"></canvas>
@@ -67,10 +68,12 @@
 
             <div
                 style="display: flex; align-items: center; justify-content: space-around; height: 100vh; width: 32vw; flex-direction: column;">
+                <h3 style="color: #57233A;">Qtd de filhos que pretendem adotar</h3>
                 <div id="grafico_2"
                     style="width: 28vw; padding: 0.5vw; background-color: white; border-radius: 2vw; height: 26vh;">
                     <canvas id="chart_2"></canvas>
                 </div>
+                <h3 style="color: #57233A;">Pretendem adotar</h3>
                 <div id="grafico_1"
                     style="width: 28vw; padding: 0.5vw; background-color:transparent; border-radius: 2vw; height: 26vh;">
                     <canvas id="chart_1"></canvas>
@@ -87,7 +90,7 @@
 </html>
 
 <script>
-    
+
     span_idUsuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     obterDadosGrafico()
@@ -202,7 +205,8 @@
         // console.log('Iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels e data
-        let labels = ['Pretendem adotar']; // Pegando os valores das respostas
+        
+        let labels = ['']; // Pegando os valores das respostas
         let option1 = dados.map(item => item.Option1); // Pegando os valores das quantidades
         let option2 = dados.map(item => item.Option2); // Pegando os valores das quantidades
 
@@ -215,8 +219,8 @@
                 borderColor: '#57233A',
                 backgroundColor: '#D4C1AE',
                 borderWidth: 2,
-                borderRadius:  6
-                
+                borderRadius: 6
+
             },
             {
                 label: 'Não',
@@ -225,7 +229,7 @@
                 backgroundColor: '#D4C1AE',
                 borderWidth: 2,
                 borderRadius: 6
-                 
+
             }]
         };
 
@@ -253,6 +257,18 @@
                             stepSize: 1
                         }
                     }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            boxHeight: 10,
+                            boxWidth: 30,
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                    
+                        }
+                    }
+
                 }
             }
         };
@@ -269,7 +285,7 @@
         console.log('Iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels e data
-        let labels = ['Qtd de filhos que pretendem adotar']; // Pegando os valores das respostas
+        let labels = ['']; // Pegando os valores das respostas
         let option1 = dados.map(item => item.Option1); // Pegando os valores das quantidades
         let option2 = dados.map(item => item.Option2); // Pegando os valores das quantidades
         let option3 = dados.map(item => item.Option3); // Pegando os valores das quantidades
@@ -288,77 +304,89 @@
                 borderColor: '#57233A',
                 backgroundColor: '#D4C1AE',
                 borderWidth: 2,
-                borderRadius: 6
-            },
-            {
-                label: '2 filhos(as)',
-                data: option2,
+                borderRadius: 6,
+    },
+    {
+        label: '2 filhos(as)',
+            data: option2,
                 borderColor: '#AE4951',
-                backgroundColor: '#D4C1AE',
-                borderWidth: 2,
-                borderRadius: 6
-            
-            },
-            {
-                label: '3 filhos(as) ou +',
-                data: option3,
+                    backgroundColor: '#D4C1AE',
+                        borderWidth: 2,
+                            borderRadius: 6
+
+    },
+    {
+        label: '3 filhos(as) ou +',
+            data: option3,
                 borderColor: '#8D2E5C',
-                backgroundColor: '#D4C1AE',
-                borderWidth: 2,
-                borderRadius: 6
-            },
-        
-            {
-                label: 'Não pretendo adotar',
-                data: option4,
+                    backgroundColor: '#D4C1AE',
+                        borderWidth: 2,
+                            borderRadius: 6
+    },
+
+    {
+        label: 'Não pretendo adotar',
+            data: option4,
                 borderColor: '#B98D72',
-                backgroundColor: '#D4C1AE',
-                borderWidth: 2,
-                borderRadius: 6
-            }]
+                    backgroundColor: '#D4C1AE',
+                        borderWidth: 2,
+                            borderRadius: 6
+    }]
         };
 
-        // console.log('----------------------------------------------');
-        // console.log('Estes dados foram recebidos pela função "obterDadosGrafico" e passados para "plotarGrafico":');
-        // console.log(dados);
+    // console.log('----------------------------------------------');
+    // console.log('Estes dados foram recebidos pela função "obterDadosGrafico" e passados para "plotarGrafico":');
+    // console.log(dados);
 
-        // console.log('----------------------------------------------');
-        // console.log('O gráfico será plotado com os respectivos valores:');
-        // console.log('Labels:');
-        // console.log(labels);
-        // console.log('Dados:');
-        // console.log(option1, option2, option3);
-        // console.log('----------------------------------------------');
+    // console.log('----------------------------------------------');
+    // console.log('O gráfico será plotado com os respectivos valores:');
+    // console.log('Labels:');
+    // console.log(labels);
+    // console.log('Dados:');
+    // console.log(option1, option2, option3);
+    // console.log('----------------------------------------------');
 
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: chartData,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1
-                        }
+    // Criando estrutura para plotar gráfico - config
+    const config = {
+        type: 'bar',
+        data: chartData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
                     }
                 }
-            }
-        };
+            },
+                plugins: {
+                    legend: {
+                        labels: {
+                            boxHeight: 10,
+                            boxWidth: 30,
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                    
+                        }
+                    }
 
-        // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById('chart_2'),
-            config
-        );
+                }
+        }
+    };
+
+    // Adicionando gráfico criado em div na tela
+    let myChart = new Chart(
+        document.getElementById('chart_2'),
+        config
+    );
     }
 
     function plotarGrafico_3(dados) {
         console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
         console.log('Iniciando plotagem do gráfico...');
-        
+
         // Criando estrutura para plotar gráfico - labels e data
-        let labels = ['Gênero que pretendem adotar']; // Pegando os valores das respostas
+        let labels = ['']; // Pegando os valores das respostas
         let option1 = dados.map(item => item.Option1); // Pegando os valores das quantidades
         let option2 = dados.map(item => item.Option2); // Pegando os valores das quantidades
         let option3 = dados.map(item => item.Option3); // Pegando os valores das quantidades
@@ -422,12 +450,25 @@
             data: chartData,
             options: {
                 scales: {
+            
                     y: {
                         beginAtZero: true,
                         ticks: {
                             stepSize: 1
                         }
                     }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            boxHeight: 10,
+                            boxWidth: 30,
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                    
+                        }
+                    }
+
                 }
             }
         };
@@ -444,7 +485,7 @@
         console.log('Iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels e data
-        let labels = ['Idade que pretendem adotar']; // Pegando os valores das respostas
+        let labels = ['']; // Pegando os valores das respostas
         let option1 = dados.map(item => item.Option1); // Pegando os valores das quantidades
         let option2 = dados.map(item => item.Option2); // Pegando os valores das quantidades
         let option3 = dados.map(item => item.Option3); // Pegando os valores das quantidades
@@ -498,6 +539,19 @@
                             stepSize: 1
                         }
                     }
+                },
+
+                plugins: {
+                    legend: {
+                        labels: {
+                            boxHeight: 10,
+                            boxWidth: 30,
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                    
+                        }
+                    }
+
                 }
             }
         };

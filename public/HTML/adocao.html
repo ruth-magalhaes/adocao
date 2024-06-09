@@ -22,7 +22,10 @@
             <li><a href="tardia.html">ADOÇÃO TARDIA</a></li>
             <li id="navRelatos"><a href="relatos.html">RELATOS</a></li>
             <li id="navQuiz"><a href="quiz.html">QUIZ</a></li>
-            <li><a href="login.html"><button>LOGIN</button></a></li>
+            <li id="navLogin"><a href="login.html">
+                    <button>LOGIN</button></li>
+            <li id="navSair"><button onclick="sair()">SAIR</button></a></li>
+            </a>
 
         </ul>
     </nav>
@@ -99,14 +102,25 @@
     }
 
 
-if (sessionStorage.ID_QUESTIONARIO == undefined) {
-    navRelatos.style.display = 'none';
-    navQuiz.style.display = 'none';
-} else {
-    navRelatos.style.display = 'unset';
-    navQuiz.style.display = 'unset';
-}
 
+    if (sessionStorage.ID_QUESTIONARIO == undefined) {
+        navRelatos.style.display = 'none';
+        navQuiz.style.display = 'none';
+        navSair.style.display = 'none';
+
+
+
+    } else {
+        navRelatos.style.display = 'unset';
+        navQuiz.style.display = 'unset';
+        navSair.style.display = 'unset';
+        navLogin.style.display = 'none';
+    }
+
+    function sair() {
+        sessionStorage.clear()
+        window.location = '../index.html';
+    }
 
 
                 let counter = document.getElementById('counter');

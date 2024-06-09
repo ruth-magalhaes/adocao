@@ -73,7 +73,7 @@ nav ul li button:hover {
     background-image: url(../assets/img/relatoEscrever.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 1500px;
+    width: 100%;
     height: 700px;
     margin-top: 10px;
 }
@@ -93,7 +93,6 @@ nav ul li button:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 200px;
 }
 
 .dash button {
@@ -132,6 +131,12 @@ button:hover {
     align-items: center;
 }
 
+.caixa_frase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .frase {
     font-size: 22px;
     font-weight: 400;
@@ -139,11 +144,12 @@ button:hover {
     display: inline-block;
     background-color: #B98D72;
     letter-spacing: 0.9px;
+    width: 60%;
     padding: 5px;
     border-radius: 6px;
-    margin-left: 400px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.166);
+    text-align: center;
 }
 
 .container {
@@ -237,42 +243,6 @@ button:hover {
     margin-top: 70px;
 }
 
-footer {
-    width: 100%;
-    display: block;
-    background-color: #ccc;
-
-}
-
-
-footer {
-    background-color: #57233A;
-    padding: 20px 0;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-icon {
-    margin: 0 10px;
-}
-
-.footer-icon img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.footer-icon img:hover {
-    transform: scale(1.1);
-}
-
 .publicacao {
     border: solid #57233A 2px;
     height: 200px;
@@ -287,7 +257,6 @@ footer {
 }
 
 .div-results {
-    max-height: 500px;
     overflow: auto;
     display: flex;
     justify-content: flex-start;
@@ -313,4 +282,57 @@ footer {
 .publicacao-descricao {
     font-weight: 400;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    display: block;
+    margin-top: 25px;
+    background-color: #57233A;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.rodapeLeft {
+    margin-left: 200px;
+    align-items: center;
+}
+
+.rodapeRight {
+    margin-left: 700px;
+    align-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon {
+    margin: 0 10px;
+}
+
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-icon img:hover {
+    transform: scale(1.1);
 }

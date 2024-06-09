@@ -96,6 +96,11 @@ main {
   button {
     cursor: pointer;
   }
+
+  .navSair button{
+    font-weight: bold;
+    font-size: 18px;
+  }
   
  main body {
     color: #57233A;
