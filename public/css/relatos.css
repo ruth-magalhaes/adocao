@@ -70,7 +70,7 @@ nav ul li button:hover {
 .janela {
     display: flex;
     flex-direction: column;
-    background-image: url(../assets/img/relatoEscrever.png);
+    background-image: url(../assets/img/relatoLivro2.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -227,7 +227,6 @@ button {
     border: transparent;
     transition: 0.5s;
     margin-top: -30px;
-    font-size: 18px;
 }
 
 button:hover {

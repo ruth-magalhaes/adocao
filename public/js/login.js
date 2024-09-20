@@ -13,6 +13,7 @@ function ocultar() {
 var tentativas = 3;
 function entrar() {
 
+
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
 
@@ -21,9 +22,14 @@ function entrar() {
 
 
     if (tentativas == 0) {
-        div_mensagem.innerHTML = `Você chegou ao limite das tentativas! <br> Tente novamente em 10 minutos.`;
+        div_mensagem.innerHTML = `Você chegou ao limite das tentativas! <br> Tente novamente em 5 minutos.`;
+        btn_entrar.disabled = true;
+
+        setTimeout(function () {
+            tentativas = 3;
+            btn_entrar.disabled = false;
+        }, 5 * 1000 * 60)
     } else {
-        div_mensagem.innerHTML = `Tentativas restante ${tentativas}`;
         
 
 
@@ -54,6 +60,7 @@ function entrar() {
                     console.log("idUsuario" + json);
 
                     // alert("estou no then do entrar");
+                    div_mensagem.innerHTML = `Login efetuado com sucesso!`;
 
                     setTimeout(function () {
                         if (sessionStorage.ID_QUESTIONARIO == 'null') {
@@ -68,6 +75,7 @@ function entrar() {
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+                div_mensagem.innerHTML = `Tentativas restante ${tentativas}`;
 
                 resposta.text().then(texto => {
                     console.error(texto);
@@ -77,7 +85,9 @@ function entrar() {
 
         }).catch(function (erro) {
             console.log(erro);
-        })
+            div_mensagem.innerHTML = `Tentativas restante ${tentativas}`;
+        })        
+
 
         tentativas--;
         return false;
